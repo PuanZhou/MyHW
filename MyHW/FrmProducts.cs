@@ -86,7 +86,8 @@ namespace MyHW
         internal void Search()
         {
             productsTableAdapter1.FillByPrice(this.nwDataSet1.Products, UPL, UPH);
-            this.dataGridView1.DataSource = this.nwDataSet1.Products;
+            this.bindingSource1.DataSource = nwDataSet1.Products;
+            this.dataGridView1.DataSource = this.bindingSource1;
             this.labelrecords.Text = $"總共有:{this.bindingSource1.Count}筆";
         }
 
@@ -113,7 +114,8 @@ namespace MyHW
         internal void FilterName()
         {
             productsTableAdapter1.FillByProductName(this.nwDataSet1.Products, textBoxProductName.Text);
-            this.dataGridView1.DataSource = this.nwDataSet1.Products;
+            this.bindingSource1.DataSource = this.nwDataSet1.Products;
+            this.dataGridView1.DataSource = this.bindingSource1;
             this.labelrecords.Text = $"總共有:{this.bindingSource1.Count}筆";
         }
     }
