@@ -62,21 +62,21 @@ namespace MyHW
             this.awDataSet1 = new MyHW.AWDataSet();
             this.productPhotoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tableAdapterManager = new MyHW.AWDataSetTableAdapters.TableAdapterManager();
-            this.largePhotoPictureBox = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.awDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productPhotoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.largePhotoPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(16, 230);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -87,7 +87,7 @@ namespace MyHW
             // 
             this.button2.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.button2.Location = new System.Drawing.Point(848, 46);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(105, 35);
             this.button2.TabIndex = 100;
@@ -285,7 +285,7 @@ namespace MyHW
             this.comboBox1.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(1037, 50);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(160, 33);
             this.comboBox1.TabIndex = 92;
@@ -306,7 +306,7 @@ namespace MyHW
             // 
             this.button1.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.button1.Location = new System.Drawing.Point(533, 48);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(307, 32);
             this.button1.TabIndex = 89;
@@ -330,7 +330,7 @@ namespace MyHW
             this.dateTimePicker2.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker2.Location = new System.Drawing.Point(307, 52);
-            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(217, 34);
             this.dateTimePicker2.TabIndex = 88;
@@ -341,7 +341,7 @@ namespace MyHW
             this.dateTimePicker1.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker1.Location = new System.Drawing.Point(56, 54);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(212, 34);
             this.dateTimePicker1.TabIndex = 87;
@@ -371,21 +371,20 @@ namespace MyHW
             this.tableAdapterManager.ProductPhotoTableAdapter = this.productPhotoTableAdapter1;
             this.tableAdapterManager.UpdateOrder = MyHW.AWDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // largePhotoPictureBox
+            // pictureBox1
             // 
-            this.largePhotoPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.productPhotoBindingSource, "LargePhoto", true));
-            this.largePhotoPictureBox.Location = new System.Drawing.Point(948, 230);
-            this.largePhotoPictureBox.Name = "largePhotoPictureBox";
-            this.largePhotoPictureBox.Size = new System.Drawing.Size(394, 282);
-            this.largePhotoPictureBox.TabIndex = 102;
-            this.largePhotoPictureBox.TabStop = false;
+            this.pictureBox1.Location = new System.Drawing.Point(948, 230);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(531, 268);
+            this.pictureBox1.TabIndex = 102;
+            this.pictureBox1.TabStop = false;
             // 
             // FrmAdventureWorks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1491, 857);
-            this.Controls.Add(this.largePhotoPictureBox);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label3);
@@ -401,7 +400,7 @@ namespace MyHW
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.dateTimePicker1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmAdventureWorks";
             this.Text = "FrmAdventureWorks";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -411,7 +410,7 @@ namespace MyHW
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.awDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productPhotoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.largePhotoPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -450,6 +449,6 @@ namespace MyHW
         private System.Windows.Forms.BindingSource bindingSource1;
         private System.Windows.Forms.BindingSource productPhotoBindingSource;
         private AWDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.PictureBox largePhotoPictureBox;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

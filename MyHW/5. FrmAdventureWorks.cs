@@ -28,6 +28,8 @@ namespace MyHW
             this.bindingSource1.DataSource = this.awDataSet1.ProductPhoto;
             this.dataGridView1.DataSource = this.bindingSource1;
             this.bindingNavigator1.BindingSource = this.bindingSource1;
+            this.pictureBox1.DataBindings.Add("Image", this.bindingSource1, "LargePhoto", true);
+            //this.largePhotoPictureBox.DataBindings.Add("Image", bindingSource1, "LargePhoto",true);
      
 
             //this.comboBox1.DataSource = this.awDataSet1.ProductPhoto;

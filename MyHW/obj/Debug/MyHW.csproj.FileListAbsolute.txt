@@ -97,3 +97,6 @@ C:\iii\ADO.NET\MyHW - 複製\MyHW\bin\Debug\MyHW.pdb
 C:\iii\ADO.NET\MyHW\MyHW\obj\Debug\MyHW.FrmAdventureWorks.resources
 D:\iii\ADO.NET\MyHW\MyHW\obj\Debug\MyHW.FrmAdventureWorks.resources
 D:\iii\ADO.NET\MyHW\MyHW\obj\Debug\MyHW.csproj.AssemblyReference.cache
+D:\iii\ADO.NET\MyHW\MyHW\bin\Debug\MytripDatabase.mdf
+D:\iii\ADO.NET\MyHW\MyHW\bin\Debug\MytripDatabase_log.ldf
+D:\iii\ADO.NET\MyHW\MyHW\obj\Debug\MyHW.FrmMyAlbum_V1.resources
