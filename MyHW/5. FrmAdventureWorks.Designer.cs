@@ -60,28 +60,36 @@ namespace MyHW
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.productPhotoTableAdapter1 = new MyHW.AWDataSetTableAdapters.ProductPhotoTableAdapter();
             this.awDataSet1 = new MyHW.AWDataSet();
+            this.productPhotoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tableAdapterManager = new MyHW.AWDataSetTableAdapters.TableAdapterManager();
+            this.largePhotoPictureBox = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.awDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productPhotoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.largePhotoPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 184);
+            this.dataGridView1.Location = new System.Drawing.Point(16, 230);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(839, 484);
+            this.dataGridView1.Size = new System.Drawing.Size(925, 607);
             this.dataGridView1.TabIndex = 101;
             // 
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button2.Location = new System.Drawing.Point(636, 37);
+            this.button2.Location = new System.Drawing.Point(848, 46);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(79, 28);
+            this.button2.Size = new System.Drawing.Size(105, 35);
             this.button2.TabIndex = 100;
             this.button2.Text = "排序";
             this.button2.UseVisualStyleBackColor = true;
@@ -92,10 +100,9 @@ namespace MyHW
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("新細明體", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(39, 9);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(52, 11);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(120, 14);
+            this.label3.Size = new System.Drawing.Size(140, 17);
             this.label3.TabIndex = 99;
             this.label3.Text = "AWDataSetModel";
             // 
@@ -118,14 +125,14 @@ namespace MyHW
             this.bindingNavigatorSeparator2,
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem});
-            this.bindingNavigator1.Location = new System.Drawing.Point(73, 144);
+            this.bindingNavigator1.Location = new System.Drawing.Point(97, 180);
             this.bindingNavigator1.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.bindingNavigator1.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.bindingNavigator1.MoveNextItem = this.bindingNavigatorMoveNextItem;
             this.bindingNavigator1.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigator1.Size = new System.Drawing.Size(262, 31);
+            this.bindingNavigator1.Size = new System.Drawing.Size(286, 31);
             this.bindingNavigator1.TabIndex = 98;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
@@ -135,13 +142,13 @@ namespace MyHW
             this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(28, 28);
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorAddNewItem.Text = "加入新的";
             // 
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(27, 28);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(34, 28);
             this.bindingNavigatorCountItem.Text = "/{0}";
             this.bindingNavigatorCountItem.ToolTipText = "項目總數";
             // 
@@ -151,7 +158,7 @@ namespace MyHW
             this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
             this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(28, 28);
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorDeleteItem.Text = "刪除";
             // 
             // bindingNavigatorMoveFirstItem
@@ -160,7 +167,7 @@ namespace MyHW
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(28, 28);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorMoveFirstItem.Text = "移到最前面";
             // 
             // bindingNavigatorMovePreviousItem
@@ -169,7 +176,7 @@ namespace MyHW
             this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(28, 28);
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorMovePreviousItem.Text = "移到上一個";
             // 
             // bindingNavigatorSeparator
@@ -183,7 +190,7 @@ namespace MyHW
             this.bindingNavigatorPositionItem.AutoSize = false;
             this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(35, 23);
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(45, 27);
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "目前的位置";
             // 
@@ -198,7 +205,7 @@ namespace MyHW
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(28, 28);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorMoveNextItem.Text = "移到下一個";
             // 
             // bindingNavigatorMoveLastItem
@@ -207,7 +214,7 @@ namespace MyHW
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(28, 28);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorMoveLastItem.Text = "移到最後面";
             // 
             // bindingNavigatorSeparator2
@@ -218,10 +225,9 @@ namespace MyHW
             // label4
             // 
             this.label4.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label4.Location = new System.Drawing.Point(163, 86);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(217, 108);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(116, 39);
+            this.label4.Size = new System.Drawing.Size(155, 49);
             this.label4.TabIndex = 97;
             this.label4.Text = "00/100";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -229,10 +235,10 @@ namespace MyHW
             // button16
             // 
             this.button16.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button16.Location = new System.Drawing.Point(348, 86);
-            this.button16.Margin = new System.Windows.Forms.Padding(2);
+            this.button16.Location = new System.Drawing.Point(464, 108);
+            this.button16.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(46, 39);
+            this.button16.Size = new System.Drawing.Size(61, 49);
             this.button16.TabIndex = 96;
             this.button16.Text = ">>";
             this.button16.UseVisualStyleBackColor = true;
@@ -241,10 +247,10 @@ namespace MyHW
             // button15
             // 
             this.button15.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button15.Location = new System.Drawing.Point(298, 86);
-            this.button15.Margin = new System.Windows.Forms.Padding(2);
+            this.button15.Location = new System.Drawing.Point(397, 108);
+            this.button15.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(46, 39);
+            this.button15.Size = new System.Drawing.Size(61, 49);
             this.button15.TabIndex = 95;
             this.button15.Text = ">";
             this.button15.UseVisualStyleBackColor = true;
@@ -253,10 +259,10 @@ namespace MyHW
             // button14
             // 
             this.button14.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button14.Location = new System.Drawing.Point(92, 86);
-            this.button14.Margin = new System.Windows.Forms.Padding(2);
+            this.button14.Location = new System.Drawing.Point(123, 108);
+            this.button14.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(46, 39);
+            this.button14.Size = new System.Drawing.Size(61, 49);
             this.button14.TabIndex = 94;
             this.button14.Text = "<";
             this.button14.UseVisualStyleBackColor = true;
@@ -265,10 +271,10 @@ namespace MyHW
             // button13
             // 
             this.button13.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button13.Location = new System.Drawing.Point(42, 86);
-            this.button13.Margin = new System.Windows.Forms.Padding(2);
+            this.button13.Location = new System.Drawing.Point(56, 108);
+            this.button13.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(46, 39);
+            this.button13.Size = new System.Drawing.Size(61, 49);
             this.button13.TabIndex = 93;
             this.button13.Text = "<<";
             this.button13.UseVisualStyleBackColor = true;
@@ -278,9 +284,10 @@ namespace MyHW
             // 
             this.comboBox1.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(778, 40);
+            this.comboBox1.Location = new System.Drawing.Point(1037, 50);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 28);
+            this.comboBox1.Size = new System.Drawing.Size(160, 33);
             this.comboBox1.TabIndex = 92;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -288,18 +295,20 @@ namespace MyHW
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label2.Location = new System.Drawing.Point(725, 42);
+            this.label2.Location = new System.Drawing.Point(967, 52);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 20);
+            this.label2.Size = new System.Drawing.Size(58, 25);
             this.label2.TabIndex = 91;
             this.label2.Text = "Year:";
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button1.Location = new System.Drawing.Point(400, 38);
+            this.button1.Location = new System.Drawing.Point(533, 48);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(230, 26);
+            this.button1.Size = new System.Drawing.Size(307, 32);
             this.button1.TabIndex = 89;
             this.button1.Text = " 某 日期區間 的腳踏車";
             this.button1.UseVisualStyleBackColor = true;
@@ -309,9 +318,10 @@ namespace MyHW
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label1.Location = new System.Drawing.Point(208, 43);
+            this.label1.Location = new System.Drawing.Point(277, 54);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(16, 20);
+            this.label1.Size = new System.Drawing.Size(21, 25);
             this.label1.TabIndex = 90;
             this.label1.Text = "-";
             // 
@@ -319,9 +329,10 @@ namespace MyHW
             // 
             this.dateTimePicker2.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(230, 42);
+            this.dateTimePicker2.Location = new System.Drawing.Point(307, 52);
+            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(164, 29);
+            this.dateTimePicker2.Size = new System.Drawing.Size(217, 34);
             this.dateTimePicker2.TabIndex = 88;
             this.dateTimePicker2.Value = new System.DateTime(2013, 5, 1, 14, 2, 0, 0);
             // 
@@ -329,9 +340,10 @@ namespace MyHW
             // 
             this.dateTimePicker1.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(42, 43);
+            this.dateTimePicker1.Location = new System.Drawing.Point(56, 54);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(160, 29);
+            this.dateTimePicker1.Size = new System.Drawing.Size(212, 34);
             this.dateTimePicker1.TabIndex = 87;
             this.dateTimePicker1.Value = new System.DateTime(2008, 4, 1, 14, 1, 0, 0);
             // 
@@ -348,11 +360,32 @@ namespace MyHW
             this.awDataSet1.DataSetName = "AWDataSet";
             this.awDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // productPhotoBindingSource
+            // 
+            this.productPhotoBindingSource.DataMember = "ProductPhoto";
+            this.productPhotoBindingSource.DataSource = this.awDataSet1;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.ProductPhotoTableAdapter = this.productPhotoTableAdapter1;
+            this.tableAdapterManager.UpdateOrder = MyHW.AWDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // largePhotoPictureBox
+            // 
+            this.largePhotoPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.productPhotoBindingSource, "LargePhoto", true));
+            this.largePhotoPictureBox.Location = new System.Drawing.Point(948, 230);
+            this.largePhotoPictureBox.Name = "largePhotoPictureBox";
+            this.largePhotoPictureBox.Size = new System.Drawing.Size(394, 282);
+            this.largePhotoPictureBox.TabIndex = 102;
+            this.largePhotoPictureBox.TabStop = false;
+            // 
             // FrmAdventureWorks
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(972, 680);
+            this.ClientSize = new System.Drawing.Size(1491, 857);
+            this.Controls.Add(this.largePhotoPictureBox);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label3);
@@ -368,6 +401,7 @@ namespace MyHW
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.dateTimePicker1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmAdventureWorks";
             this.Text = "FrmAdventureWorks";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -376,6 +410,8 @@ namespace MyHW
             this.bindingNavigator1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.awDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productPhotoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.largePhotoPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -412,5 +448,8 @@ namespace MyHW
         private AWDataSetTableAdapters.ProductPhotoTableAdapter productPhotoTableAdapter1;
         private AWDataSet awDataSet1;
         private System.Windows.Forms.BindingSource bindingSource1;
+        private System.Windows.Forms.BindingSource productPhotoBindingSource;
+        private AWDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.PictureBox largePhotoPictureBox;
     }
 }

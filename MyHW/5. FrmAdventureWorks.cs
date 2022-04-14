@@ -16,6 +16,8 @@ namespace MyHW
         public FrmAdventureWorks()
         {
             InitializeComponent();
+
+
             SqlConnection conn = new SqlConnection("Data Source=.;Initial Catalog=AdventureWorks2019;Integrated Security=True");
             SqlDataAdapter dataAdapter = new SqlDataAdapter("select distinct DATEPART(yyyy,ModifiedDate) as Time from Production.ProductPhoto", conn);
             DataTable ds = new DataTable();
@@ -26,7 +28,8 @@ namespace MyHW
             this.bindingSource1.DataSource = this.awDataSet1.ProductPhoto;
             this.dataGridView1.DataSource = this.bindingSource1;
             this.bindingNavigator1.BindingSource = this.bindingSource1;
-            
+     
+
             //this.comboBox1.DataSource = this.awDataSet1.ProductPhoto;
             //this.comboBox1.DisplayMember = "distinct ModifiedDate";
         }
@@ -72,7 +75,7 @@ namespace MyHW
         {
             ComboBox comboBox = sender as ComboBox;
             string year = comboBox.Text;
-            productPhotoTableAdapter1.FillByYYYY(awDataSet1.ProductPhoto, year);
+            productPhotoTableAdapter1.FillByYear(awDataSet1.ProductPhoto, year);
         }
     }
 }

@@ -56,25 +56,15 @@ namespace MyHW
         {
 
             bool IsNUm;
+           
             IsNUm = int.TryParse(textBoxUPL.Text, out UPL) && int.TryParse(textBoxUPH.Text, out UPH);
-            if (IsNUm)
-            {
-
-            }
-            else if(textBoxUPH.Text == string.Empty)
-            {
-                UPH = Int32.MaxValue;
-            }
-            else if (textBoxUPL.Text == string.Empty)
-            {
-                UPL=1;
-            }
-            else
+            
+            if (!IsNUm)
             {
                 MessageBox.Show("請輸入數字!");
                 return;
             }
-            
+
             Search();
         }
 

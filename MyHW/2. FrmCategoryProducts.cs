@@ -108,7 +108,7 @@ namespace MyHW
         internal void DisconnectedSelected()
         {
             SqlConnection conn = new SqlConnection("Data Source =.; Initial Catalog = Northwind; Integrated Security = True");
-            SqlDataAdapter dataAdapter = new SqlDataAdapter("select ProductName , CategoryName,UnitPrice from Products p join Categories c on p.CategoryID = c.CategoryID where c.CategoryName= '{discategoryName}'", conn);
+            SqlDataAdapter dataAdapter = new SqlDataAdapter($"select ProductName , CategoryName,UnitPrice from Products p join Categories c on p.CategoryID = c.CategoryID where c.CategoryName= '{discategoryName}'", conn);
             DataSet ds = new DataSet();
             dataAdapter.Fill(ds);
             listBox1.Items.Clear();
@@ -118,10 +118,21 @@ namespace MyHW
                 string CN = string.Empty;
                 for (int column = 0; column < table.Columns.Count; column++)
                 {
-                    CN += table.Columns[column].ColumnName;
+                    CN += $"{table.Columns[column].ColumnName,-40}";
                 }
+
                 listBox1.Items.Add(CN);
 
+                
+                for (int row = 0; row < table.Rows.Count; row++)
+                {
+                    string RN = string.Empty;
+                    for (int j = 0; j < table.Columns.Count; j++)
+                    {
+                        RN += $"{table.Rows[row][j],-40}";
+                    }
+                    listBox1.Items.Add(RN);
+                }
             }
         }
     }

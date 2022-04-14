@@ -58,7 +58,6 @@ C:\iii\ADO.NET\Exercise\MyHW\MyHW\obj\Debug\MyHW.pdb
 D:\iii\ADO.NET\MyHW\MyHW\bin\Debug\MyHW.exe.config
 D:\iii\ADO.NET\MyHW\MyHW\bin\Debug\MyHW.exe
 D:\iii\ADO.NET\MyHW\MyHW\bin\Debug\MyHW.pdb
-D:\iii\ADO.NET\MyHW\MyHW\obj\Debug\MyHW.csproj.AssemblyReference.cache
 D:\iii\ADO.NET\MyHW\MyHW\obj\Debug\MyHW.FrmCategoryProducts.resources
 D:\iii\ADO.NET\MyHW\MyHW\obj\Debug\MyHW.FrmProducts.resources
 D:\iii\ADO.NET\MyHW\MyHW\obj\Debug\MyHW.MyHWForm.resources
@@ -96,3 +95,5 @@ C:\iii\ADO.NET\MyHW - 複製\MyHW\bin\Debug\MyHW.exe.config
 C:\iii\ADO.NET\MyHW - 複製\MyHW\bin\Debug\MyHW.exe
 C:\iii\ADO.NET\MyHW - 複製\MyHW\bin\Debug\MyHW.pdb
 C:\iii\ADO.NET\MyHW\MyHW\obj\Debug\MyHW.FrmAdventureWorks.resources
+D:\iii\ADO.NET\MyHW\MyHW\obj\Debug\MyHW.FrmAdventureWorks.resources
+D:\iii\ADO.NET\MyHW\MyHW\obj\Debug\MyHW.csproj.AssemblyReference.cache
