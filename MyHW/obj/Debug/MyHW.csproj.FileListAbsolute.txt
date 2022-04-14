@@ -81,7 +81,6 @@ C:\iii\ADO.NET\MyHW\MyHW\obj\Debug\MyHW.csproj.GenerateResource.cache
 C:\iii\ADO.NET\MyHW\MyHW\obj\Debug\MyHW.csproj.CoreCompileInputs.cache
 C:\iii\ADO.NET\MyHW\MyHW\obj\Debug\MyHW.exe
 C:\iii\ADO.NET\MyHW\MyHW\obj\Debug\MyHW.pdb
-C:\iii\ADO.NET\MyHW\MyHW\obj\Debug\MyHomeWork.FrmAdventureWorks.resources
 C:\iii\ADO.NET\MyHW - 複製\MyHW\obj\Debug\MyHW.csproj.AssemblyReference.cache
 C:\iii\ADO.NET\MyHW - 複製\MyHW\obj\Debug\MyHW.FrmCategoryProducts.resources
 C:\iii\ADO.NET\MyHW - 複製\MyHW\obj\Debug\MyHW.FrmProducts.resources
@@ -96,3 +95,4 @@ C:\iii\ADO.NET\MyHW - 複製\MyHW\obj\Debug\MyHW.pdb
 C:\iii\ADO.NET\MyHW - 複製\MyHW\bin\Debug\MyHW.exe.config
 C:\iii\ADO.NET\MyHW - 複製\MyHW\bin\Debug\MyHW.exe
 C:\iii\ADO.NET\MyHW - 複製\MyHW\bin\Debug\MyHW.pdb
+C:\iii\ADO.NET\MyHW\MyHW\obj\Debug\MyHW.FrmAdventureWorks.resources

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -19,14 +20,14 @@ namespace MyHW
             this.bindingSource1.DataSource = this.awDataSet1.ProductPhoto;
             this.dataGridView1.DataSource = this.bindingSource1;
             this.bindingNavigator1.BindingSource = this.bindingSource1;
-            //SqlConnection conn = new SqlConnection("Data Source=.;Initial Catalog=AdventureWorks2019;Integrated Security=True");
-            //SqlDataAdapter dataAdapter = new SqlDataAdapter(" select  DISTINCT DATEPART(yyyy,ModifiedDate)as DateTime from Production.ProductPhoto", conn);
-            //DataTable ds = new DataTable();
-            //dataAdapter.Fill(ds);
-            //this.comboBox1.DataSource = ds;
-            //this.comboBox1.DisplayMember= "DateTime";
-            this.comboBox1.DataSource = this.awDataSet1.ProductPhoto;
-            this.comboBox1.DisplayMember = "ModifiedDate";
+            SqlConnection conn = new SqlConnection("Data Source=.;Initial Catalog=AdventureWorks2019;Integrated Security=True");
+            SqlDataAdapter dataAdapter = new SqlDataAdapter("select distinct DATEPART(yyyy,ModifiedDate) as Time from Production.ProductPhoto", conn);
+            DataTable ds = new DataTable();
+            dataAdapter.Fill(ds);
+            this.comboBox1.DataSource = ds;
+            this.comboBox1.DisplayMember = "Time";
+            //this.comboBox1.DataSource = this.awDataSet1.ProductPhoto;
+            //this.comboBox1.DisplayMember = "distinct ModifiedDate";
         }
 
         private void button15_Click(object sender, EventArgs e)
@@ -64,6 +65,14 @@ namespace MyHW
         private void button2_Click(object sender, EventArgs e)
         {
             dataGridView1.Sort(dataGridView1.Columns[5], System.ComponentModel.ListSortDirection.Descending);
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ComboBox comboBox = sender as ComboBox;
+            string year = comboBox.Text;
+            productPhotoTableAdapter1.FillByYear(awDataSet1.ProductPhoto, year);
+
         }
     }
 }
