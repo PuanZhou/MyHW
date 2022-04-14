@@ -44,18 +44,20 @@ namespace MyHW
                 }
             }
 
-            SqlDataAdapter dataAdapter = new SqlDataAdapter($"select  CategoryName  from Categories", conn);
-            DataTable ds = new DataTable();
+            SqlDataAdapter dataAdapter = new SqlDataAdapter("select  CategoryName  from Categories", conn);
+            DataSet ds = new DataSet();
             dataAdapter.Fill(ds);
-            comboBoxDisconnected.DataSource = ds;
-            comboBoxDisconnected.DisplayMember = "CategoryName";
+            foreach (DataRow row in ds.Tables[0].Rows)
+            {
+                comboBoxDisconnected.Items.Add(row[0]);
+            }
         }
 
-        int index;
+        string categoryName;
         private void comboBoxCategory_SelectedIndexChanged(object sender, EventArgs e)
         {
             ComboBox comboBox = (ComboBox)sender;
-            index = comboBox.SelectedIndex;
+            categoryName = comboBox.Text;
             SelectCategory();
         }
 
@@ -68,7 +70,7 @@ namespace MyHW
                 conn = new SqlConnection("Data Source=.;Initial Catalog=Northwind;Integrated Security=True");
                 conn.Open();
 
-                SqlCommand command = new SqlCommand($"select *, CategoryName  from Products p join Categories c on p.CategoryID = c.CategoryID where c.CategoryID = {index + 1}", conn);
+                SqlCommand command = new SqlCommand($"select *, CategoryName  from Products p join Categories c on p.CategoryID = c.CategoryID where c.CategoryName = '{categoryName}'", conn);
 
                 SqlDataReader dataReader = command.ExecuteReader();
 
@@ -95,21 +97,32 @@ namespace MyHW
             }
         }
 
-        int disindex;
+        string discategoryName;
         private void comboBoxDisconnected_SelectedIndexChanged(object sender, EventArgs e)
         {
             ComboBox combobox = (ComboBox)sender;
-             disindex = combobox.SelectedIndex;
+            discategoryName = combobox.Text;
             DisconnectedSelected();
         }
 
         internal void DisconnectedSelected()
         {
             SqlConnection conn = new SqlConnection("Data Source =.; Initial Catalog = Northwind; Integrated Security = True");
-            SqlDataAdapter dataAdapter = new SqlDataAdapter($"select ProductName , CategoryName  from Products p join Categories c on p.CategoryID = c.CategoryID where c.CategoryID = {disindex + 1}", conn);
+            SqlDataAdapter dataAdapter = new SqlDataAdapter("select ProductName , CategoryName,UnitPrice from Products p join Categories c on p.CategoryID = c.CategoryID where c.CategoryName= '{discategoryName}'", conn);
             DataSet ds = new DataSet();
             dataAdapter.Fill(ds);
-            dataGridView1.DataSource = ds.Tables[0];
+            listBox1.Items.Clear();
+            for (int i = 0; i < ds.Tables.Count; i++)
+            {
+                DataTable table = ds.Tables[i];
+                string CN = string.Empty;
+                for (int column = 0; column < table.Columns.Count; column++)
+                {
+                    CN += table.Columns[column].ColumnName;
+                }
+                listBox1.Items.Add(CN);
+
+            }
         }
     }
 }
