@@ -98,11 +98,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AWDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="6.FrmMyAlbum_V1.cs">
+    <Compile Include="6. FrmMyAlbum_V1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="6.FrmMyAlbum_V1.Designer.cs">
-      <DependentUpon>6.FrmMyAlbum_V1.cs</DependentUpon>
+    <Compile Include="6. FrmMyAlbum_V1.Designer.cs">
+      <DependentUpon>6. FrmMyAlbum_V1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmToolCRUD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmToolCRUD.Designer.cs">
+      <DependentUpon>FrmToolCRUD.cs</DependentUpon>
     </Compile>
     <Compile Include="MytripDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -134,8 +140,11 @@
     <EmbeddedResource Include="5. FrmAdventureWorks.resx">
       <DependentUpon>5. FrmAdventureWorks.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="6.FrmMyAlbum_V1.resx">
-      <DependentUpon>6.FrmMyAlbum_V1.cs</DependentUpon>
+    <EmbeddedResource Include="6. FrmMyAlbum_V1.resx">
+      <DependentUpon>6. FrmMyAlbum_V1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmToolCRUD.resx">
+      <DependentUpon>FrmToolCRUD.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -163,6 +172,7 @@
     <None Include="MytripDataSet.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MytripDataSet.Designer.cs</LastGenOutput>
     </None>
     <None Include="MytripDataSet.xss">
       <DependentUpon>MytripDataSet.xsd</DependentUpon>
@@ -193,10 +203,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MytripDatabase.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="MytripDatabase_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>MytripDatabase.mdf</DependentUpon>
     </Content>
   </ItemGroup>
