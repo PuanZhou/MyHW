@@ -143,3 +143,8 @@ D:\iii\ADO.NET\MyHW\MyHW\bin\Debug\MymemberDatabase.mdf
 D:\iii\ADO.NET\MyHW\MyHW\bin\Debug\MymemberDatabase_log.ldf
 D:\iii\ADO.NET\MyHW\MyHW\obj\Debug\MyHW.FrmLogon.resources
 D:\iii\ADO.NET\MyHW\MyHW\obj\Debug\MyHW.FrmCustomers.resources
+D:\iii\ADO.NET\MyHW\MyHW\bin\Debug\MytripDataSet.Designer.cs
+D:\iii\ADO.NET\MyHW\MyHW\bin\Debug\MytripDataSet.xsc
+D:\iii\ADO.NET\MyHW\MyHW\bin\Debug\MytripDataSet.xsd
+D:\iii\ADO.NET\MyHW\MyHW\bin\Debug\MytripDataSet.xss
+D:\iii\ADO.NET\MyHW\MyHW\obj\Debug\MyHW.Frmmain.resources

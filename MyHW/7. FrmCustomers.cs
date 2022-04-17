@@ -82,10 +82,10 @@ namespace MyHW
         {
             ComboBox comboBox = sender as ComboBox;
             comboboxtxt = comboBox.Text;
-            SelectCountry(comboboxtxt,"none");
+            SelectCountry(comboboxtxt);
         }
 
-        private void SelectCountry(string Country, string Features)
+        private void SelectCountry(string Country)
         {
             try
             {
@@ -111,7 +111,7 @@ namespace MyHW
                         ListViewItem lvi = this.listView1.Items.Add(dataReader[0].ToString());
 
                         //this.listView1.Visible = false;
-                        
+
 
                         if (lvi.Index % 2 == 0)
                         {
@@ -132,94 +132,29 @@ namespace MyHW
                             {
                                 lvi.SubItems.Add(dataReader[i].ToString());
                             }
-                           
+
                             string groupName = dataReader[8].ToString();
 
-                            switch (groupName)
-                            {
-                                case "Argentina":
-                                    lvi.ImageIndex = 0;
-                                    break;
-                                case "Austria":
-                                    lvi.ImageIndex = 1;
-                                    break;
-                                case "Belgium":
-                                    lvi.ImageIndex = 2;
-                                    break;
-                                case "Brazil":
-                                    lvi.ImageIndex = 3;
-                                    break;
-                                case "Canada":
-                                    lvi.ImageIndex = 4;
-                                    break;
-                                case "Denmark":
-                                    lvi.ImageIndex = 5;
-                                    break;
-                                case "Finland":
-                                    lvi.ImageIndex = 6;
-                                    break;
-                                case "France":
-                                    lvi.ImageIndex = 7;
-                                    break;
-                                case "Germany":
-                                    lvi.ImageIndex = 8;
-                                    break;
-                                case "Ireland":
-                                    lvi.ImageIndex = 9;
-                                    break;
-                                case "Italy":
-                                    lvi.ImageIndex = 10;
-                                    break;
-                                case "Mexico":
-                                    lvi.ImageIndex = 11;
-                                    break;
-                                case "Norway":
-                                    lvi.ImageIndex = 12;
-                                    break;
-                                case "Poland":
-                                    lvi.ImageIndex = 13;
-                                    break;
-                                case "Portugal":
-                                    lvi.ImageIndex = 14;
-                                    break;
-                                case "Spain":
-                                    lvi.ImageIndex = 15;
-                                    break;
-                                case "Sweden":
-                                    lvi.ImageIndex = 16;
-                                    break;
-                                case "Switzerland":
-                                    lvi.ImageIndex = 17;
-                                    break;
-                                case "UK":
-                                    lvi.ImageIndex = 18;
-                                    break;
-                                case "USA":
-                                    lvi.ImageIndex = 19;
-                                    break;
-                                case "Venezuela":
-                                    lvi.ImageIndex = 20;
-                                    break;
-                            }
+                            int index = 0;
+                            countryimage(groupName, out index);
 
-                            if (Features == "Group")
+                            lvi.ImageIndex = index;
+
+                            if (dataReader[8].ToString() == groupName)
                             {
-                                if (dataReader[8].ToString() == groupName)
+                                if (this.listView1.Groups[groupName] == null)
                                 {
-                                    if (this.listView1.Groups[groupName] == null)
-                                    {
-                                        ListViewGroup group = this.listView1.Groups.Add(groupName, groupName);
-                                        group.Tag = 0;
-                                        lvi.Group = group;
-                                    }
-                                    else
-                                    {
-                                        ListViewGroup group = this.listView1.Groups[groupName];
-                                        lvi.Group = group;
-                                    }
+                                    ListViewGroup group = this.listView1.Groups.Add(groupName, groupName);
+                                    group.Tag = 0;
+                                    lvi.Group = group;
+                                }
+                                else
+                                {
+                                    ListViewGroup group = this.listView1.Groups[groupName];
+                                    lvi.Group = group;
                                 }
                             }
-                           
+
                         }
                     }
                 }
@@ -227,6 +162,77 @@ namespace MyHW
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void countryimage(string Country, out int Index)
+        {
+            Index = 0;
+            switch (Country)
+            {
+                case "Argentina":
+                    Index = 0;
+                    break;
+                case "Austria":
+                    Index = 1;
+                    break;
+                case "Belgium":
+                    Index = 2;
+                    break;
+                case "Brazil":
+                    Index = 3;
+                    break;
+                case "Canada":
+                    Index = 4;
+                    break;
+                case "Denmark":
+                    Index = 5;
+                    break;
+                case "Finland":
+                    Index = 6;
+                    break;
+                case "France":
+                    Index = 7;
+                    break;
+                case "Germany":
+                    Index = 8;
+                    break;
+                case "Ireland":
+                    Index = 9;
+                    break;
+                case "Italy":
+                    Index = 10;
+                    break;
+                case "Mexico":
+                    Index = 11;
+                    break;
+                case "Norway":
+                    Index = 12;
+                    break;
+                case "Poland":
+                    Index = 13;
+                    break;
+                case "Portugal":
+                    Index = 14;
+                    break;
+                case "Spain":
+                    Index = 15;
+                    break;
+                case "Sweden":
+                    Index = 16;
+                    break;
+                case "Switzerland":
+                    Index = 17;
+                    break;
+                case "UK":
+                    Index = 18;
+                    break;
+                case "USA":
+                    Index = 19;
+                    break;
+                case "Venezuela":
+                    Index = 20;
+                    break;
             }
         }
 
@@ -247,6 +253,7 @@ namespace MyHW
 
         private void customerIDAscToolStripMenuItem_Click(object sender, EventArgs e)
         {
+
         }
 
         private void customerIdDescToolStripMenuItem_Click(object sender, EventArgs e)
@@ -255,7 +262,7 @@ namespace MyHW
 
         private void countryToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            SelectCountry(comboboxtxt, "Group");
+
         }
     }
 }
