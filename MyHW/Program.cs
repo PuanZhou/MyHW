@@ -22,7 +22,7 @@ namespace MyHW
             
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmMyAlbum_V1());
+            Application.Run(new FrmCustomers());
         }
     }
 }

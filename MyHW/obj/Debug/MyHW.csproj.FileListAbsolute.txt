@@ -139,3 +139,7 @@ D:\iii\ADO.NET\MyHW - 複製\MyHW\bin\Debug\MyHW.exe
 D:\iii\ADO.NET\MyHW - 複製\MyHW\bin\Debug\MyHW.pdb
 D:\iii\ADO.NET\MyHW - 複製\MyHW\obj\Debug\MyHW.FrmToolCRUD.resources
 D:\iii\ADO.NET\MyHW\MyHW\obj\Debug\MyHW.FrmToolCRUD.resources
+D:\iii\ADO.NET\MyHW\MyHW\bin\Debug\MymemberDatabase.mdf
+D:\iii\ADO.NET\MyHW\MyHW\bin\Debug\MymemberDatabase_log.ldf
+D:\iii\ADO.NET\MyHW\MyHW\obj\Debug\MyHW.FrmLogon.resources
+D:\iii\ADO.NET\MyHW\MyHW\obj\Debug\MyHW.FrmCustomers.resources
