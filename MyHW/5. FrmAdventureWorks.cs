@@ -31,7 +31,9 @@ namespace MyHW
         private void CreateYearToComboBox()
         {
             this.productPhoto1TableAdapter1.FillDateYear(this.awDataSet1.ProductPhoto1);
-            foreach(DataRow row in awDataSet1.ProductPhoto1)
+
+
+            foreach (DataRow row in awDataSet1.ProductPhoto1)
             {
                 comboBox1.Items.Add(row[0]);
             }

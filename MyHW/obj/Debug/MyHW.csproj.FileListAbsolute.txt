@@ -100,8 +100,6 @@ D:\iii\ADO.NET\MyHW\MyHW\obj\Debug\MyHW.csproj.AssemblyReference.cache
 D:\iii\ADO.NET\MyHW\MyHW\bin\Debug\MytripDatabase.mdf
 D:\iii\ADO.NET\MyHW\MyHW\bin\Debug\MytripDatabase_log.ldf
 D:\iii\ADO.NET\MyHW\MyHW\obj\Debug\MyHW.FrmMyAlbum_V1.resources
-C:\iii\ADO.NET\MyHW\MyHW\bin\Debug\MytripDatabase.mdf
-C:\iii\ADO.NET\MyHW\MyHW\bin\Debug\MytripDatabase_log.ldf
 C:\iii\ADO.NET\MyHW\MyHW\obj\Debug\MyHW.FrmMyAlbum_V1.resources
 D:\iii\ADO.NET\4.15\MyHW\MyHW\bin\Debug\MytripDatabase.mdf
 D:\iii\ADO.NET\4.15\MyHW\MyHW\bin\Debug\MytripDatabase_log.ldf
@@ -148,3 +146,15 @@ D:\iii\ADO.NET\MyHW\MyHW\bin\Debug\MytripDataSet.xsc
 D:\iii\ADO.NET\MyHW\MyHW\bin\Debug\MytripDataSet.xsd
 D:\iii\ADO.NET\MyHW\MyHW\bin\Debug\MytripDataSet.xss
 D:\iii\ADO.NET\MyHW\MyHW\obj\Debug\MyHW.Frmmain.resources
+C:\iii\ADO.NET\MyHW\MyHW\bin\Debug\MytripDataSet.Designer.cs
+C:\iii\ADO.NET\MyHW\MyHW\bin\Debug\MytripDataSet.xsc
+C:\iii\ADO.NET\MyHW\MyHW\bin\Debug\MytripDataSet.xsd
+C:\iii\ADO.NET\MyHW\MyHW\bin\Debug\MytripDataSet.xss
+C:\iii\ADO.NET\MyHW\MyHW\bin\Debug\MymemberDatabase.mdf
+C:\iii\ADO.NET\MyHW\MyHW\bin\Debug\MymemberDatabase_log.ldf
+C:\iii\ADO.NET\MyHW\MyHW\obj\Debug\MyHW.FrmCustomers.resources
+C:\iii\ADO.NET\MyHW\MyHW\obj\Debug\MyHW.FrmLogon.resources
+C:\iii\ADO.NET\MyHW\MyHW\obj\Debug\MyHW.Frmmain.resources
+C:\iii\ADO.NET\MyHW\MyHW\obj\Debug\MyHW.FrmToolCRUD.resources
+C:\iii\ADO.NET\MyHW\MyHW\bin\Debug\MytripDatabase.mdf
+C:\iii\ADO.NET\MyHW\MyHW\bin\Debug\MytripDatabase_log.ldf

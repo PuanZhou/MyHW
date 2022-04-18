@@ -23,6 +23,7 @@ namespace MyHW
             LoadCountrytoComboBox();
         }
 
+        bool groupby = false;
         private void LoadCountrytoComboBox()
         {
             try
@@ -36,6 +37,7 @@ namespace MyHW
                     conn.Open();
                     SqlDataReader dataReader = command.ExecuteReader();
                     this.comboBox1.Text = "Select a Country";
+                    this.comboBox1.Items.Add("All Countries");
                     while (dataReader.Read())
                     {
                         comboBox1.Items.Add(dataReader["Country"]);
@@ -79,32 +81,38 @@ namespace MyHW
 
         string comboboxtxt = string.Empty;
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            ComboBox comboBox = sender as ComboBox;
-            comboboxtxt = comboBox.Text;
-            SelectCountry(comboboxtxt);
+        {        
+            if (groupby == true)
+            {
+                SelectCountry("Group");
+            }
+            else
+            {
+                SelectCountry("none");
+            }
         }
 
-        private void SelectCountry(string Country)
+        private void SelectCountry(string Features)
         {
             try
             {
                 using (SqlConnection conn = new SqlConnection(Settings.Default.NorthwindConnectionString))
                 {
                     SqlCommand command = new SqlCommand();
-                    if (Country == "All Countries")
+                    if (comboBox1.Text == "All Countries")
                     {
                         command.CommandText = "select * from Customers";
                     }
                     else
                     {
-                        command.CommandText = $"select * from Customers where Country ='{Country}'";
+                        command.CommandText = $"select * from Customers where Country ='{comboBox1.Text}'";
                     }
                     command.Connection = conn;
 
                     conn.Open();
                     SqlDataReader dataReader = command.ExecuteReader();
                     this.listView1.Items.Clear();
+
 
                     while (dataReader.Read())
                     {
@@ -122,6 +130,28 @@ namespace MyHW
                             lvi.BackColor = Color.FromArgb(162, 181, 205);
                         }
 
+                        string groupName = dataReader[8].ToString();
+                        int index = 0;
+                        countryimage(groupName, out index);
+
+                        lvi.ImageIndex = index;
+
+                        if(Features== "Group")
+                        {
+                            if (this.listView1.Groups[groupName] == null)
+                            {
+                                ListViewGroup group = this.listView1.Groups.Add(groupName, groupName);
+                                lvi.Group = group;
+                            }
+                            else
+                            {
+                                ListViewGroup group = this.listView1.Groups[groupName];
+                                lvi.Group = group;
+                            }
+
+                            lvi.Group.Header = $"{groupName}({lvi.Group.Items.Count})";
+                        }
+
                         for (int i = 1; i < dataReader.FieldCount; i++)
                         {
                             if (dataReader.IsDBNull(i))
@@ -132,29 +162,6 @@ namespace MyHW
                             {
                                 lvi.SubItems.Add(dataReader[i].ToString());
                             }
-
-                            string groupName = dataReader[8].ToString();
-
-                            int index = 0;
-                            countryimage(groupName, out index);
-
-                            lvi.ImageIndex = index;
-
-                            if (dataReader[8].ToString() == groupName)
-                            {
-                                if (this.listView1.Groups[groupName] == null)
-                                {
-                                    ListViewGroup group = this.listView1.Groups.Add(groupName, groupName);
-                                    group.Tag = 0;
-                                    lvi.Group = group;
-                                }
-                                else
-                                {
-                                    ListViewGroup group = this.listView1.Groups[groupName];
-                                    lvi.Group = group;
-                                }
-                            }
-
                         }
                     }
                 }
@@ -253,16 +260,24 @@ namespace MyHW
 
         private void customerIDAscToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            this.listView1.Sorting= System.Windows.Forms.SortOrder.Ascending;
         }
 
         private void customerIdDescToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            this.listView1.Sorting = System.Windows.Forms.SortOrder.Descending;
         }
 
         private void countryToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            SelectCountry("Group");
+            groupby = !groupby;
+        }
 
+        private void noneToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.listView1.Groups.Clear();
+            groupby = !groupby;
         }
     }
 }

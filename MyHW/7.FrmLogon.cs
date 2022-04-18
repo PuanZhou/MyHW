@@ -26,6 +26,9 @@ namespace MyHW
                 string username = UsernameTextBox.Text;
                 string password = PasswordTextBox.Text;
                 using (SqlConnection conn = new SqlConnection(Settings.Default.MymemberDatabase))
+                //Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database1.mdf;Integrated Security=True;Connect Timeout=30
+                //Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\MymemberDatabase.mdf;Integrated Security=True;Connect Timeout=30
+                //Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\MymemberDatabase.mdf;Integrated Security=True;Connect Timeout=30
                 {
                     SqlCommand command = new SqlCommand();
                     command.CommandText = "InsertMember";

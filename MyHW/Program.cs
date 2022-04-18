@@ -19,10 +19,10 @@ namespace MyHW
         {
             //解決傳統的Windows Forms在高解析度（High DPI）設定下，所引發的文字模糊問題
             if (System.Environment.OSVersion.Version.Major >= 6) { SetProcessDPIAware(); }
-            
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Frmmain());
+            Application.Run(new FrmCustomers());
         }
     }
 }

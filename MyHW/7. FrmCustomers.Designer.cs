@@ -45,6 +45,7 @@ namespace MyHW
             this.countryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ImageList2 = new System.Windows.Forms.ImageList(this.components);
             this.ImageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.noneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,8 +62,6 @@ namespace MyHW
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "All Countries"});
             this.comboBox1.Location = new System.Drawing.Point(112, 39);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(186, 28);
@@ -101,21 +100,21 @@ namespace MyHW
             // detToolStripMenuItem
             // 
             this.detToolStripMenuItem.Name = "detToolStripMenuItem";
-            this.detToolStripMenuItem.Size = new System.Drawing.Size(163, 24);
+            this.detToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
             this.detToolStripMenuItem.Text = "Details View";
             this.detToolStripMenuItem.Click += new System.EventHandler(this.detToolStripMenuItem_Click);
             // 
             // largeIconToolStripMenuItem
             // 
             this.largeIconToolStripMenuItem.Name = "largeIconToolStripMenuItem";
-            this.largeIconToolStripMenuItem.Size = new System.Drawing.Size(163, 24);
+            this.largeIconToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
             this.largeIconToolStripMenuItem.Text = "Large Icon";
             this.largeIconToolStripMenuItem.Click += new System.EventHandler(this.largeIconToolStripMenuItem_Click);
             // 
             // smallIconToolStripMenuItem
             // 
             this.smallIconToolStripMenuItem.Name = "smallIconToolStripMenuItem";
-            this.smallIconToolStripMenuItem.Size = new System.Drawing.Size(163, 24);
+            this.smallIconToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
             this.smallIconToolStripMenuItem.Text = "Small Icon";
             this.smallIconToolStripMenuItem.Click += new System.EventHandler(this.smallIconToolStripMenuItem_Click);
             // 
@@ -125,7 +124,7 @@ namespace MyHW
             this.customerIDAscToolStripMenuItem,
             this.customerIdDescToolStripMenuItem});
             this.orderByToolStripMenuItem.Name = "orderByToolStripMenuItem";
-            this.orderByToolStripMenuItem.Size = new System.Drawing.Size(163, 24);
+            this.orderByToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
             this.orderByToolStripMenuItem.Text = "Order by";
             // 
             // customerIDAscToolStripMenuItem
@@ -145,9 +144,10 @@ namespace MyHW
             // groupByToolStripMenuItem
             // 
             this.groupByToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.countryToolStripMenuItem});
+            this.countryToolStripMenuItem,
+            this.noneToolStripMenuItem});
             this.groupByToolStripMenuItem.Name = "groupByToolStripMenuItem";
-            this.groupByToolStripMenuItem.Size = new System.Drawing.Size(163, 24);
+            this.groupByToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
             this.groupByToolStripMenuItem.Text = "Group by";
             // 
             // countryToolStripMenuItem
@@ -209,6 +209,13 @@ namespace MyHW
             this.ImageList1.Images.SetKeyName(19, "united-states16.png");
             this.ImageList1.Images.SetKeyName(20, "venezuela16.png");
             // 
+            // noneToolStripMenuItem
+            // 
+            this.noneToolStripMenuItem.Name = "noneToolStripMenuItem";
+            this.noneToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.noneToolStripMenuItem.Text = "None";
+            this.noneToolStripMenuItem.Click += new System.EventHandler(this.noneToolStripMenuItem_Click);
+            // 
             // FrmCustomers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -244,5 +251,6 @@ namespace MyHW
         private System.Windows.Forms.ToolStripMenuItem customerIdDescToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem groupByToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem countryToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem noneToolStripMenuItem;
     }
 }
