@@ -149,6 +149,7 @@ namespace MyHW
             // 
             this.listBox1.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox1.FormattingEnabled = true;
+            this.listBox1.HorizontalScrollbar = true;
             this.listBox1.ItemHeight = 18;
             this.listBox1.Location = new System.Drawing.Point(129, 95);
             this.listBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
