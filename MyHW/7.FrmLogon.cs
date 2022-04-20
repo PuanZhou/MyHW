@@ -25,6 +25,19 @@ namespace MyHW
             {
                 string username = UsernameTextBox.Text;
                 string password = PasswordTextBox.Text;
+
+                if (UsernameTextBox.Text.Trim() == string.Empty)
+                {
+                    MessageBox.Show("請輸入會員名稱");
+                    return;
+                }
+                else if (PasswordTextBox.Text.Trim() == string.Empty)
+                {
+                    MessageBox.Show("請輸入密碼");
+                    return;
+                }
+
+
                 using (SqlConnection conn = new SqlConnection(Settings.Default.MymemberDatabase))
                 //Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database1.mdf;Integrated Security=True;Connect Timeout=30
                 //Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\MymemberDatabase.mdf;Integrated Security=True;Connect Timeout=30
@@ -43,6 +56,14 @@ namespace MyHW
                     MessageBox.Show("註冊成功!");
                 }
             }
+            catch (SqlException ex)
+            {
+                if (ex.Number == 2627)
+                {
+                    MessageBox.Show("已存在會員名稱");
+                }
+
+            }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
@@ -55,6 +76,17 @@ namespace MyHW
             {
                 string username = UsernameTextBox.Text;
                 string password = PasswordTextBox.Text;
+                
+                if (UsernameTextBox.Text.Trim() == string.Empty)
+                {
+                    MessageBox.Show("請輸入會員名稱");
+                    return;
+                }
+                else if (PasswordTextBox.Text.Trim() == string.Empty)
+                {
+                    MessageBox.Show("請輸入密碼");
+                    return;
+                }
 
                 using (SqlConnection conn=new SqlConnection(Settings.Default.MymemberDatabase))
                 {
@@ -72,6 +104,11 @@ namespace MyHW
                     if (dataReader.HasRows)
                     {
                         MessageBox.Show("會員登入成功");
+                        Frmmain f = new Frmmain();
+                        this.Hide();
+                        f.ShowDialog();
+
+                        System.Environment.Exit(0);
                     }
                     else
                     {

@@ -81,7 +81,7 @@ namespace MyHW
 
         string comboboxtxt = string.Empty;
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {        
+        {
             if (groupby == true)
             {
                 SelectCountry("Group");
@@ -136,7 +136,7 @@ namespace MyHW
 
                         lvi.ImageIndex = index;
 
-                        if(Features== "Group")
+                        if (Features == "Group")
                         {
                             if (this.listView1.Groups[groupName] == null)
                             {
@@ -148,6 +148,16 @@ namespace MyHW
                                 ListViewGroup group = this.listView1.Groups[groupName];
                                 lvi.Group = group;
                             }
+
+                            if (lvi.Group.Items.Count % 2 == 0)
+                            {
+                                lvi.BackColor = Color.FromArgb(255, 248, 220);
+                            }
+                            else
+                            {
+                                lvi.BackColor = Color.FromArgb(162, 181, 205);
+                            }
+
 
                             lvi.Group.Header = $"{groupName}({lvi.Group.Items.Count})";
                         }
@@ -260,7 +270,7 @@ namespace MyHW
 
         private void customerIDAscToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.listView1.Sorting= System.Windows.Forms.SortOrder.Ascending;
+            this.listView1.Sorting = System.Windows.Forms.SortOrder.Ascending;
         }
 
         private void customerIdDescToolStripMenuItem_Click(object sender, EventArgs e)

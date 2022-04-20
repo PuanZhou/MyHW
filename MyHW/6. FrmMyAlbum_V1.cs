@@ -21,16 +21,16 @@ namespace MyHW
 
         private void LoadData()
         {
-            mytripCityTableAdapter1.Fill(this.mytripDataSet1.City);
-            mytripPhotoTableAdapter1.Fill(this.mytripDataSet1.Photo);
-            this.bindingSource1.DataSource = this.mytripDataSet1.Photo;
+            this.city1TableAdapter1.FillByCity(this.mytripDataSet1.City1);
+            this.photo1TableAdapter1.FillByAll(this.mytripDataSet1.Photo1);
+            this.bindingSource1.DataSource = this.mytripDataSet1.Photo1;
             this.dataGridView1.DataSource = this.bindingSource1;
             this.pictureBox1.DataBindings.Add("Image", this.bindingSource1, "Photo", true);
-            for (int i = 0; i < mytripDataSet1.City.Rows.Count; i++)
+            for (int i = 0; i < this.mytripDataSet1.City1.Rows.Count; i++)
             {
                 LinkLabel linkLabel = new LinkLabel();
 
-                linkLabel.Text = mytripDataSet1.City[i].CityName;
+                linkLabel.Text = this.mytripDataSet1.City1[i].CityName;
                 linkLabel.Left = 15;
                 linkLabel.Top = 40 * i;
                 linkLabel.Click += LinkLabel_Click;
@@ -40,12 +40,18 @@ namespace MyHW
 
         private void LinkLabel_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            this.pictureBox1.DataBindings.Clear();
+            LinkLabel linkLabel = (LinkLabel)sender;
+            string cityname = linkLabel.Text;
+            this.photo1TableAdapter1.FillByCityName(this.mytripDataSet1.Photo1,cityname);
+            this.bindingSource1.DataSource = this.mytripDataSet1.Photo1;
+            this.dataGridView1.DataSource = this.bindingSource1;
+            this.pictureBox1.DataBindings.Add("Image", this.bindingSource1, "Photo", true);
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            FrmToolCRUD frmToolCRUD = new FrmToolCRUD();
+            FrmCRUD frmToolCRUD = new FrmCRUD();
             frmToolCRUD.Show();
         }
     }
