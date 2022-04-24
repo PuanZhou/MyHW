@@ -43,39 +43,51 @@ namespace MyHW
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.LightGray;
             this.button1.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(554, 202);
+            this.button1.Location = new System.Drawing.Point(388, 239);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(151, 36);
             this.button1.TabIndex = 28;
             this.button1.Text = "建立帳號 (&A)";
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.MouseLeave += new System.EventHandler(this.ReColorCursor);
+            this.button1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ChangeColorCursor);
             // 
             // Cancel
             // 
+            this.Cancel.BackColor = System.Drawing.Color.LightGray;
             this.Cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.Cancel.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cancel.Location = new System.Drawing.Point(393, 202);
+            this.Cancel.Location = new System.Drawing.Point(464, 197);
             this.Cancel.Name = "Cancel";
-            this.Cancel.Size = new System.Drawing.Size(123, 36);
+            this.Cancel.Size = new System.Drawing.Size(129, 36);
             this.Cancel.TabIndex = 27;
-            this.Cancel.Text = "取消(&C)";
+            this.Cancel.Text = "取消(&Esc)";
+            this.Cancel.UseVisualStyleBackColor = false;
             this.Cancel.Click += new System.EventHandler(this.Cancel_Click);
+            this.Cancel.MouseLeave += new System.EventHandler(this.ReColorCursor);
+            this.Cancel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ChangeColorCursor);
             // 
             // OK
             // 
+            this.OK.BackColor = System.Drawing.Color.LightGray;
             this.OK.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OK.Location = new System.Drawing.Point(278, 202);
+            this.OK.Location = new System.Drawing.Point(329, 197);
             this.OK.Name = "OK";
-            this.OK.Size = new System.Drawing.Size(109, 36);
+            this.OK.Size = new System.Drawing.Size(129, 36);
             this.OK.TabIndex = 26;
-            this.OK.Text = "確定(&O)";
+            this.OK.Text = "確定(&Enter)";
+            this.OK.UseVisualStyleBackColor = false;
             this.OK.Click += new System.EventHandler(this.OK_Click);
+            this.OK.MouseLeave += new System.EventHandler(this.ReColorCursor);
+            this.OK.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ChangeColorCursor);
             // 
             // PasswordTextBox
             // 
             this.PasswordTextBox.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PasswordTextBox.Location = new System.Drawing.Point(282, 150);
+            this.PasswordTextBox.Location = new System.Drawing.Point(358, 165);
             this.PasswordTextBox.Name = "PasswordTextBox";
             this.PasswordTextBox.PasswordChar = '*';
             this.PasswordTextBox.Size = new System.Drawing.Size(220, 31);
@@ -84,7 +96,7 @@ namespace MyHW
             // UsernameTextBox
             // 
             this.UsernameTextBox.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UsernameTextBox.Location = new System.Drawing.Point(282, 88);
+            this.UsernameTextBox.Location = new System.Drawing.Point(358, 103);
             this.UsernameTextBox.Name = "UsernameTextBox";
             this.UsernameTextBox.Size = new System.Drawing.Size(220, 31);
             this.UsernameTextBox.TabIndex = 23;
@@ -92,7 +104,7 @@ namespace MyHW
             // PasswordLabel
             // 
             this.PasswordLabel.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PasswordLabel.Location = new System.Drawing.Point(281, 124);
+            this.PasswordLabel.Location = new System.Drawing.Point(357, 139);
             this.PasswordLabel.Name = "PasswordLabel";
             this.PasswordLabel.Size = new System.Drawing.Size(220, 23);
             this.PasswordLabel.TabIndex = 24;
@@ -102,7 +114,7 @@ namespace MyHW
             // UsernameLabel
             // 
             this.UsernameLabel.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UsernameLabel.Location = new System.Drawing.Point(281, 62);
+            this.UsernameLabel.Location = new System.Drawing.Point(357, 77);
             this.UsernameLabel.Name = "UsernameLabel";
             this.UsernameLabel.Size = new System.Drawing.Size(220, 23);
             this.UsernameLabel.TabIndex = 22;
@@ -121,8 +133,7 @@ namespace MyHW
             // 
             // FrmLogon
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(737, 355);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button1);
@@ -133,9 +144,11 @@ namespace MyHW
             this.Controls.Add(this.PasswordLabel);
             this.Controls.Add(this.UsernameLabel);
             this.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FrmLogon";
             this.Text = "FrmLogon";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmLogon_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

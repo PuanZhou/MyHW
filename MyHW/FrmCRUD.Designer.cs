@@ -46,6 +46,7 @@ namespace MyHW
             this.cityDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
             this.photoIdTextBox = new System.Windows.Forms.TextBox();
             this.photoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cityIDTextBox = new System.Windows.Forms.TextBox();
@@ -77,7 +78,19 @@ namespace MyHW
             this.tableAdapterManager = new MyHW.MytripDataSetTableAdapters.TableAdapterManager();
             this.cityTableAdapter = new MyHW.MytripDataSetTableAdapters.CityTableAdapter();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.button1 = new System.Windows.Forms.Button();
+            this.citybindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton7 = new System.Windows.Forms.ToolStripButton();
             photoIdLabel = new System.Windows.Forms.Label();
             cityIDLabel = new System.Windows.Forms.Label();
             photoNameLabel = new System.Windows.Forms.Label();
@@ -97,6 +110,8 @@ namespace MyHW
             ((System.ComponentModel.ISupportInitialize)(this.photoBindingNavigator)).BeginInit();
             this.photoBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.photoDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.citybindingNavigator)).BeginInit();
+            this.citybindingNavigator.SuspendLayout();
             this.SuspendLayout();
             // 
             // photoIdLabel
@@ -171,6 +186,7 @@ namespace MyHW
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.AutoScroll = true;
+            this.splitContainer1.Panel1.Controls.Add(this.citybindingNavigator);
             this.splitContainer1.Panel1.Controls.Add(cityIDLabel1);
             this.splitContainer1.Panel1.Controls.Add(this.cityIDTextBox1);
             this.splitContainer1.Panel1.Controls.Add(cityNameLabel);
@@ -255,6 +271,16 @@ namespace MyHW
             this.dataGridViewTextBoxColumn7.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
             this.dataGridViewTextBoxColumn7.Width = 125;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(13, 226);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(129, 66);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "Browse....";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // photoIdTextBox
             // 
@@ -514,6 +540,7 @@ namespace MyHW
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.City1TableAdapter = null;
             this.tableAdapterManager.CityTableAdapter = this.cityTableAdapter;
             this.tableAdapterManager.PhotoTableAdapter = this.photoTableAdapter;
             this.tableAdapterManager.UpdateOrder = MyHW.MytripDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
@@ -526,20 +553,136 @@ namespace MyHW
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // button1
+            // citybindingNavigator
             // 
-            this.button1.Location = new System.Drawing.Point(13, 226);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(129, 66);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "Browse....";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.citybindingNavigator.AddNewItem = this.toolStripButton1;
+            this.citybindingNavigator.BindingSource = this.cityBindingSource;
+            this.citybindingNavigator.CountItem = this.toolStripLabel1;
+            this.citybindingNavigator.DeleteItem = this.toolStripButton2;
+            this.citybindingNavigator.Dock = System.Windows.Forms.DockStyle.None;
+            this.citybindingNavigator.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.citybindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton3,
+            this.toolStripButton4,
+            this.toolStripSeparator1,
+            this.toolStripTextBox1,
+            this.toolStripLabel1,
+            this.toolStripSeparator2,
+            this.toolStripButton5,
+            this.toolStripButton6,
+            this.toolStripSeparator3,
+            this.toolStripButton1,
+            this.toolStripButton2,
+            this.toolStripButton7});
+            this.citybindingNavigator.Location = new System.Drawing.Point(0, 9);
+            this.citybindingNavigator.MoveFirstItem = this.toolStripButton3;
+            this.citybindingNavigator.MoveLastItem = this.toolStripButton6;
+            this.citybindingNavigator.MoveNextItem = this.toolStripButton5;
+            this.citybindingNavigator.MovePreviousItem = this.toolStripButton4;
+            this.citybindingNavigator.Name = "citybindingNavigator";
+            this.citybindingNavigator.PositionItem = this.toolStripTextBox1;
+            this.citybindingNavigator.Size = new System.Drawing.Size(359, 27);
+            this.citybindingNavigator.TabIndex = 5;
+            this.citybindingNavigator.Text = "bindingNavigator1";
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton1.Size = new System.Drawing.Size(29, 24);
+            this.toolStripButton1.Text = "加入新的";
+            // 
+            // toolStripLabel1
+            // 
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(34, 24);
+            this.toolStripLabel1.Text = "/{0}";
+            this.toolStripLabel1.ToolTipText = "項目總數";
+            // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton2.Size = new System.Drawing.Size(29, 24);
+            this.toolStripButton2.Text = "刪除";
+            // 
+            // toolStripButton3
+            // 
+            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
+            this.toolStripButton3.Name = "toolStripButton3";
+            this.toolStripButton3.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton3.Size = new System.Drawing.Size(29, 24);
+            this.toolStripButton3.Text = "移到最前面";
+            // 
+            // toolStripButton4
+            // 
+            this.toolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
+            this.toolStripButton4.Name = "toolStripButton4";
+            this.toolStripButton4.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton4.Size = new System.Drawing.Size(29, 24);
+            this.toolStripButton4.Text = "移到上一個";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 27);
+            // 
+            // toolStripTextBox1
+            // 
+            this.toolStripTextBox1.AccessibleName = "位置";
+            this.toolStripTextBox1.AutoSize = false;
+            this.toolStripTextBox1.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9F);
+            this.toolStripTextBox1.Name = "toolStripTextBox1";
+            this.toolStripTextBox1.Size = new System.Drawing.Size(50, 27);
+            this.toolStripTextBox1.Text = "0";
+            this.toolStripTextBox1.ToolTipText = "目前的位置";
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 27);
+            // 
+            // toolStripButton5
+            // 
+            this.toolStripButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton5.Image")));
+            this.toolStripButton5.Name = "toolStripButton5";
+            this.toolStripButton5.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton5.Size = new System.Drawing.Size(29, 24);
+            this.toolStripButton5.Text = "移到下一個";
+            // 
+            // toolStripButton6
+            // 
+            this.toolStripButton6.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton6.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton6.Image")));
+            this.toolStripButton6.Name = "toolStripButton6";
+            this.toolStripButton6.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton6.Size = new System.Drawing.Size(29, 24);
+            this.toolStripButton6.Text = "移到最後面";
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 27);
+            // 
+            // toolStripButton7
+            // 
+            this.toolStripButton7.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton7.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton7.Image")));
+            this.toolStripButton7.Name = "toolStripButton7";
+            this.toolStripButton7.Size = new System.Drawing.Size(29, 24);
+            this.toolStripButton7.Text = "儲存資料";
+            this.toolStripButton7.Click += new System.EventHandler(this.toolStripButton7_Click);
             // 
             // FrmCRUD
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1188, 563);
             this.Controls.Add(this.splitContainer1);
             this.Name = "FrmCRUD";
@@ -560,6 +703,9 @@ namespace MyHW
             this.photoBindingNavigator.ResumeLayout(false);
             this.photoBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.photoDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.citybindingNavigator)).EndInit();
+            this.citybindingNavigator.ResumeLayout(false);
+            this.citybindingNavigator.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -606,5 +752,18 @@ namespace MyHW
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.BindingNavigator citybindingNavigator;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
+        private System.Windows.Forms.ToolStripButton toolStripButton2;
+        private System.Windows.Forms.ToolStripButton toolStripButton3;
+        private System.Windows.Forms.ToolStripButton toolStripButton4;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripButton toolStripButton5;
+        private System.Windows.Forms.ToolStripButton toolStripButton6;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripButton toolStripButton7;
     }
 }

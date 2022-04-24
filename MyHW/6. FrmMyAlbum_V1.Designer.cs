@@ -118,8 +118,7 @@ namespace MyHW
             // 
             // FrmMyAlbum_V1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1262, 550);
             this.Controls.Add(this.pictureBox1);

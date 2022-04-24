@@ -21,9 +21,9 @@ namespace MyHW
 
         private void Createbutton()
         {
-            string[] buttonname = { "MyHWForm", "FrmCategoryProducts", "FrmProducts", "Frmdatasets", "FrmAdventureWorks", "FrmMyAlbum", "FrmCustomes", "FrmLogon" };
+            string[] buttonname = { "MyHWForm", "FrmCategoryProducts", "FrmProducts", "Frmdatasets", "FrmAdventureWorks", "FrmMyAlbumV1", "FrmCustomes", "FrmLogon", "FrmMyAlbumV2","Quiz" };
 
-            for (int i = 0; i < 8; i++)
+            for (int i = 0; i < buttonname.Length; i++)
             {
                 Button newbutton = new Button();
 
@@ -38,6 +38,12 @@ namespace MyHW
                 newbutton.MouseMove += Newbutton_MouseMove;
                 newbutton.MouseLeave += Newbutton_MouseLeave;
                 this.splitContainer2.Panel1.Controls.Add(newbutton);
+                if (i == 9)
+                {
+                    newbutton.BackColor = Color.FromArgb(255, 250, 250);
+                    newbutton.MouseMove -= Newbutton_MouseMove;
+                    newbutton.MouseLeave -= Newbutton_MouseLeave;
+                }
             }
         }
 
@@ -118,12 +124,32 @@ namespace MyHW
                     Form8.Show();
                     this.splitContainer2.Panel2.Controls.Add(Form8);
                     break;
+
+                case 8:
+                    FrmMyAlbum_V2 Form9 = new FrmMyAlbum_V2();
+                    Form9.TopLevel = false;
+                    Form9.Show();
+                    this.splitContainer2.Panel2.Controls.Add(Form9);
+                    break;
+
+                case 9:
+                    FrmQuiz Form10 = new FrmQuiz();
+                    Form10.TopLevel = false;
+                    Form10.Show();
+                    this.splitContainer2.Panel2.Controls.Add(Form10);
+                    break;
             }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             this.splitContainer2.Panel1Collapsed = !this.splitContainer2.Panel1Collapsed;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            FrmEastereggsOfFather father = new FrmEastereggsOfFather();
+            father.ShowDialog();
         }
     }
 }

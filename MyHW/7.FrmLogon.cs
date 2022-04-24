@@ -128,5 +128,34 @@ namespace MyHW
             UsernameTextBox.Text = string.Empty;
             PasswordTextBox.Text = string.Empty;
         }
+
+        private void ChangeColorCursor(object sender, MouseEventArgs e)
+        {
+            Button btn = (Button)sender;
+
+            btn.BackColor = Color.OldLace;
+
+            btn.Cursor = Cursors.Hand;
+        }
+
+        private void ReColorCursor(object sender, EventArgs e)
+        {
+            Button btn = sender as Button;
+            btn.Cursor = Cursors.Default;
+            btn.BackColor = Color.LightGray;
+        }
+
+        private void FrmLogon_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                OK.PerformClick();
+            }
+
+            if (e.KeyCode == Keys.Escape)
+            {
+                Cancel.PerformClick();
+            }
+        }
     }
 }

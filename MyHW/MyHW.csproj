@@ -128,11 +128,29 @@
     <Compile Include="FrmCRUD.Designer.cs">
       <DependentUpon>FrmCRUD.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmEastereggsOfFather.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEastereggsOfFather.Designer.cs">
+      <DependentUpon>FrmEastereggsOfFather.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frmmain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Frmmain.Designer.cs">
       <DependentUpon>Frmmain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPhotoViwer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPhotoViwer.Designer.cs">
+      <DependentUpon>FrmPhotoViwer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmQuiz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmQuiz.Designer.cs">
+      <DependentUpon>FrmQuiz.cs</DependentUpon>
     </Compile>
     <Compile Include="MytripDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -179,8 +197,17 @@
     <EmbeddedResource Include="FrmCRUD.resx">
       <DependentUpon>FrmCRUD.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmEastereggsOfFather.resx">
+      <DependentUpon>FrmEastereggsOfFather.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frmmain.resx">
       <DependentUpon>Frmmain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPhotoViwer.resx">
+      <DependentUpon>FrmPhotoViwer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmQuiz.resx">
+      <DependentUpon>FrmQuiz.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

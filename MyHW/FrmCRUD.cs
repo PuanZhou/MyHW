@@ -41,5 +41,12 @@ namespace MyHW
                 this.photoPictureBox.Image = Image.FromFile(this.openFileDialog1.FileName);
             }
         }
+
+        private void toolStripButton7_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.photoBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.mytripDataSet);
+        }
     }
 }

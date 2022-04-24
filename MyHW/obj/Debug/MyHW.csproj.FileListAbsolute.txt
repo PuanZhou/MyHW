@@ -134,7 +134,6 @@ D:\iii\ADO.NET\MyHW - 複製\MyHW\bin\Debug\MyHW.exe.config
 D:\iii\ADO.NET\MyHW - 複製\MyHW\bin\Debug\MyHW.exe
 D:\iii\ADO.NET\MyHW - 複製\MyHW\bin\Debug\MyHW.pdb
 D:\iii\ADO.NET\MyHW - 複製\MyHW\obj\Debug\MyHW.FrmToolCRUD.resources
-D:\iii\ADO.NET\MyHW\MyHW\obj\Debug\MyHW.FrmToolCRUD.resources
 D:\iii\ADO.NET\MyHW\MyHW\bin\Debug\MymemberDatabase.mdf
 D:\iii\ADO.NET\MyHW\MyHW\bin\Debug\MymemberDatabase_log.ldf
 D:\iii\ADO.NET\MyHW\MyHW\obj\Debug\MyHW.FrmLogon.resources
@@ -145,7 +144,6 @@ C:\iii\ADO.NET\MyHW\MyHW\bin\Debug\MymemberDatabase_log.ldf
 C:\iii\ADO.NET\MyHW\MyHW\obj\Debug\MyHW.FrmCustomers.resources
 C:\iii\ADO.NET\MyHW\MyHW\obj\Debug\MyHW.FrmLogon.resources
 C:\iii\ADO.NET\MyHW\MyHW\obj\Debug\MyHW.Frmmain.resources
-C:\iii\ADO.NET\MyHW\MyHW\obj\Debug\MyHW.FrmToolCRUD.resources
 C:\iii\ADO.NET\MyHW\MyHW\bin\Debug\MytripDatabase.mdf
 C:\iii\ADO.NET\MyHW\MyHW\bin\Debug\MytripDatabase_log.ldf
 D:\iii\ADO.NET\MyHW\MyHW\obj\Debug\MyHW.FrmMyAlbum_V2.resources
@@ -176,3 +174,32 @@ D:\iii\MyHW\MyHW\bin\Debug\MytripDatabase_log.ldf
 D:\iii\MyHW\MyHW\bin\Debug\MyHW.exe.config
 D:\iii\MyHW\MyHW\bin\Debug\MyHW.exe
 D:\iii\MyHW\MyHW\bin\Debug\MyHW.pdb
+D:\iii\ADO.NET\MyHW\MyHW\obj\Debug\MyHW.FrmCRUD.resources
+C:\iii\ADO.NET\MyHW\MyHW\obj\Debug\MyHW.FrmCRUD.resources
+D:\iii\ADO.NET\MyHW\MyHW\MyHW\bin\Debug\MymemberDatabase.mdf
+D:\iii\ADO.NET\MyHW\MyHW\MyHW\bin\Debug\MymemberDatabase_log.ldf
+D:\iii\ADO.NET\MyHW\MyHW\MyHW\bin\Debug\MytripDatabase.mdf
+D:\iii\ADO.NET\MyHW\MyHW\MyHW\bin\Debug\MytripDatabase_log.ldf
+D:\iii\ADO.NET\MyHW\MyHW\MyHW\bin\Debug\MyHW.exe.config
+D:\iii\ADO.NET\MyHW\MyHW\MyHW\bin\Debug\MyHW.exe
+D:\iii\ADO.NET\MyHW\MyHW\MyHW\bin\Debug\MyHW.pdb
+D:\iii\ADO.NET\MyHW\MyHW\MyHW\obj\Debug\MyHW.FrmCategoryProducts.resources
+D:\iii\ADO.NET\MyHW\MyHW\MyHW\obj\Debug\MyHW.FrmProducts.resources
+D:\iii\ADO.NET\MyHW\MyHW\MyHW\obj\Debug\MyHW.MyHWForm.resources
+D:\iii\ADO.NET\MyHW\MyHW\MyHW\obj\Debug\MyHW.FrmDataSet.resources
+D:\iii\ADO.NET\MyHW\MyHW\MyHW\obj\Debug\MyHW.FrmAdventureWorks.resources
+D:\iii\ADO.NET\MyHW\MyHW\MyHW\obj\Debug\MyHW.FrmMyAlbum_V1.resources
+D:\iii\ADO.NET\MyHW\MyHW\MyHW\obj\Debug\MyHW.FrmMyAlbum_V2.resources
+D:\iii\ADO.NET\MyHW\MyHW\MyHW\obj\Debug\MyHW.FrmCustomers.resources
+D:\iii\ADO.NET\MyHW\MyHW\MyHW\obj\Debug\MyHW.FrmLogon.resources
+D:\iii\ADO.NET\MyHW\MyHW\MyHW\obj\Debug\MyHW.FrmCRUD.resources
+D:\iii\ADO.NET\MyHW\MyHW\MyHW\obj\Debug\MyHW.Frmmain.resources
+D:\iii\ADO.NET\MyHW\MyHW\MyHW\obj\Debug\MyHW.Properties.Resources.resources
+D:\iii\ADO.NET\MyHW\MyHW\MyHW\obj\Debug\MyHW.csproj.GenerateResource.cache
+D:\iii\ADO.NET\MyHW\MyHW\MyHW\obj\Debug\MyHW.csproj.CoreCompileInputs.cache
+D:\iii\ADO.NET\MyHW\MyHW\MyHW\obj\Debug\MyHW.exe
+D:\iii\ADO.NET\MyHW\MyHW\MyHW\obj\Debug\MyHW.pdb
+D:\iii\ADO.NET\MyHW\MyHW\MyHW\obj\Debug\MyHW.FrmPhotoViwer.resources
+D:\iii\ADO.NET\MyHW\MyHW\MyHW\obj\Debug\MyHW.csproj.AssemblyReference.cache
+D:\iii\ADO.NET\MyHW\MyHW\MyHW\obj\Debug\MyHW.FrmEastereggsOfFather.resources
+D:\iii\ADO.NET\MyHW\MyHW\MyHW\obj\Debug\MyHW.FrmQuiz.resources
